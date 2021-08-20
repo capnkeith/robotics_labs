@@ -1,0 +1,60 @@
+   1               		.file	"led.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               		.section	.text.startup,"ax",@progbits
+   9               	.global	main
+  11               	main:
+  12               	/* prologue: function */
+  13               	/* frame size = 0 */
+  14               	/* stack size = 0 */
+  15               	.L__stack_usage = 0
+  16 0000 8FE0      		ldi r24,lo8(15)
+  17 0002 84B9      		out 0x4,r24
+  18 0004 80E0      		ldi r24,0
+  19               	.L3:
+  20 0006 E82F      		mov r30,r24
+  21 0008 F0E0      		ldi r31,0
+  22 000a E050      		subi r30,lo8(-(steps))
+  23 000c F040      		sbci r31,hi8(-(steps))
+  24 000e 9081      		ld r25,Z
+  25 0010 95B9      		out 0x5,r25
+  26 0012 8F5F      		subi r24,lo8(-(1))
+  27 0014 8430      		cpi r24,lo8(4)
+  28 0016 01F4      		brne .L2
+  29 0018 80E0      		ldi r24,0
+  30               	.L2:
+  31 001a 2FEF      		ldi r18,lo8(799999)
+  32 001c 34E3      		ldi r19,hi8(799999)
+  33 001e 9CE0      		ldi r25,hlo8(799999)
+  34 0020 2150      	1:	subi r18,1
+  35 0022 3040      		sbci r19,0
+  36 0024 9040      		sbci r25,0
+  37 0026 01F4      		brne 1b
+  38 0028 00C0      		rjmp .
+  39 002a 0000      		nop
+  40 002c 00C0      		rjmp .L3
+  42               	.global	steps
+  43               		.data
+  46               	steps:
+  47 0000 01        		.byte	1
+  48 0001 02        		.byte	2
+  49 0002 04        		.byte	4
+  50 0003 08        		.byte	8
+  51               		.ident	"GCC: (GNU) 8.1.0"
+  52               	.global __do_copy_data
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 led.c
+/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:11     .text.startup:0000000000000000 main
+/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:46     .data:0000000000000000 steps
+
+UNDEFINED SYMBOLS
+__do_copy_data
