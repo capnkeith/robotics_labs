@@ -45,8 +45,13 @@
 #include <avr/io.h>         // include to access port IO
 #include <util/delay.h>     // for _delay_us() 
 
-//uint8_t steps[] = { 1,2,4,8 }; full steps. Minimum delay per step is about 2000us.
-uint8_t steps[] = {0b1000,0b1100,0b0100,0b0110,0b0010,0b0011,0b0001,0b1001}; // half steps. You can delay as little as 900us with half-steps.
+//uncoment to use full steps. These are faster but less tourque. Only 4 steps:
+//uint8_t steps[] = { 0b1100, 0b0110, 0b0011, 0b1001 };
+//
+//
+// these are half steps, there are 8 steps total. More torque than full steps,
+// plus you can have a smaller delay, I got as low as 900 microseconds.
+uint8_t steps[] = {0b1000,0b1100,0b0100,0b0110,0b0010,0b0011,0b0001,0b1001}; 
 
 int main (void)                     // decare the main function. All projects have this it is called first.
 {                   
