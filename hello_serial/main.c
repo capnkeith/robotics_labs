@@ -9,22 +9,37 @@
 // Using this:
 // After wiring, flash this program to your chip. Then open a serial terminal 
 // program on the serial port for the TTL to USB converter or whaterver serial 
-// port you are using. If you flash it again now, or power cycle the chip you 
-// will see:
-//    'Hello Serial' printed on your computer.
-// When you press a key in the terminal window it will be echo what you pressed.
+// port you are using. 
 // 
+// For instance, on a mac and linux, you can use the 'screen' program. If my
+// serial device is called:
+//     /dev/tty.usbserial-A50285BI
+// Then I can run screen to talk to my atmega328p by running this from the mac:
+//
+//    screen /dev/tty.usbserial-A50285BI 9600
+//
+// If you change 9600 to a different baud you need to change the program.
+//
+// When you flash it, will see on the screen:
+// 
+//    'Hello Serial'
+// When you press a key in the terminal window it will be echo what you pressed.
+//******************************************************************************
+// We will use this as the future basis of much of our debugging and control
+// of our robot.
+//******************************************************************************
 // This is not a really good way to interface because you cannot do anyting else
 // while you are waiting for the registers to be ready. We can get around this
-// by polling.
+// by polling, see more serial labs.
 //******************************************************************************
+
 #include <avr/io.h> 
 #include <util/delay.h>
 
-unsigned char uart_receive( void );
-void uart_send_string(char *StringPtr);
-void uart_init( unsigned int ubrr);     
-void uart_send( unsigned char data );
+uint8_t uart_receive( void );
+void uart_send_string(char *string);
+void uart_init( uint16_t ubrr);     
+void uart_send( char data );
 
 
 /* uart_init() configures the UART of your atmega328p to the baud rate indicated. */
@@ -38,14 +53,14 @@ void uart_init(uint16_t baud)
 }
 
 /* send a single byte from the atmega328 to the serial port */
-void uart_send( unsigned char data )
+void uart_send(char data)
 {
     while(!(UCSR0A & (1<<UDRE0)));      /* wait until the register is ready */
     UDR0 = data;                        /* write data to the UDR0 registery to be transmitted */
 }
 
 /* receive a single byte from the serial port into the atmega328p */
-unsigned char uart_receive(void)    
+uint8_t uart_receive(void)    
 {
     while(!(UCSR0A & (1 << RXC0)));
     return UDR0;
