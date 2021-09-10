@@ -40,8 +40,8 @@ void uart_init(uint16_t baud)
 /* send a single byte from the atmega328 to the serial port */
 void uart_send( unsigned char data )
 {
-	while(!(UCSR0A & (1<<UDRE0)));      /* wait until the register is ready */
-	UDR0 = data;                        /* write data to the UDR0 registery to be transmitted */
+    while(!(UCSR0A & (1<<UDRE0)));      /* wait until the register is ready */
+    UDR0 = data;                        /* write data to the UDR0 registery to be transmitted */
 }
 
 /* receive a single byte from the serial port into the atmega328p */
@@ -63,16 +63,16 @@ void uart_send_string(char *string)
 
 int main(void)
 {
-	uart_init(9600);                        /* init serial to 9600 N,8,2 */
+    uart_init(9600);                        /* init serial to 9600 N,8,2 */
     uart_send_string("Hello Serial\n\r");   /* write Hello Serial. on a new line */
     uart_send_string("What you want?\n\r"); /* write What you want? on a new line */
-	while(1)
-	{
+    while(1)
+    {
         char c = uart_receive();            /* get the next pressed key from the serial */
         if (c)                              /* if something was pressed */
         {
             uart_send_string("atmega says you Pressed: "); /* write atmega says you Pressed: then no newline */
-            uart_send(c);	                /* finish by sending the key pressed */
+            uart_send(c);                   /* finish by sending the key pressed */
             uart_send_string("\n\r");       /* and a new line and CR. */
         }
     }
