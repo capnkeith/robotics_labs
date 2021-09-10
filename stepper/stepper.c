@@ -21,15 +21,16 @@
 // 
 //   +------------+         +------------+               Stepper Motor
 //   |atmega328p  |         | ULN2803    |                  +--+
-//   |            +- B0 --1-+            +-10-------blue----|[]|
-//   |            +- B1 --2-+            +-11-------pink----|[]|
-//   |            +- B2 --3-+            +-12-------yellow--|[]|
-//   |            +- B3 --4-+            +-13-------orange--|[]|
-//   |            |       5-+            +-14   +---red-----|[]|
-//   +------------+       6-+            +-15   |           +--+
-//                        7-+            +-16   +-- 5V
-//                        8-+            +-17   |
-//                 GND----9-+            +-18---+
+//   |            |         |            |                  |[]|--red-VCC
+//   |            +- B0 --1-+            +-10-------orange--|[]|
+//   |            +- B1 --2-+            +-11-------yellow--|[]|
+//   |            +- B2 --3-+            +-12-------pink----|[]|
+//   |            +- B3 --4-+            +-13-------blue----|[]|
+//   |            |       5-+            +-14               +--+
+//   +------------+       6-+            +-15           
+//                        7-+            +-16   
+//                        8-+            +-17  
+//                 GND----9-+            +-18---VCC
 //                          -------------
 //
 // Hook up both pin1 of the ULN2803 and the positive end of the LED directly to 
@@ -45,13 +46,9 @@
 #include <avr/io.h>         // include to access port IO
 #include <util/delay.h>     // for _delay_us() 
 
-//uncoment to use full steps. These are faster but less tourque. Only 4 steps:
-//uint8_t steps[] = { 0b1100, 0b0110, 0b0011, 0b1001 };
-//
-//
-// these are half steps, there are 8 steps total. More torque than full steps,
-// plus you can have a smaller delay, I got as low as 900 microseconds.
-uint8_t steps[] = {0b1000,0b1100,0b0100,0b0110,0b0010,0b0011,0b0001,0b1001}; 
+uint8_t steps[] = {0b0001, 0b0010, 0b0100, 0b1000}; //full steps. Minimum delay per step is about 2000us.
+//uint8_t steps[] = {0b1000,0b1100,0b0100,0b0110,0b0010,0b0011,0b0001,0b1001}; // half steps. You can delay as little as 900us with half-steps.
+//uint8_t steps[] = {0b1010, 0b0110, 0b0101, 0b1001}; // bipolar
 
 int main (void)                     // decare the main function. All projects have this it is called first.
 {                   
@@ -62,7 +59,7 @@ int main (void)                     // decare the main function. All projects ha
         PORTB = steps[i];
         i++;
         if (i==sizeof(steps)) i=0; // If I use sizeof instead of 8 then it works if I change steps[] to full steps...
-        _delay_us(2000);           // here you cannot see the LEDs at all because they are moving too fast.
+        _delay_us(50000);           // here you cannot see the LEDs at all because they are moving too fast.
                                    // this is maximum stpeed for the stepper motors we use (28BYJ-48). 
                                    // if you delay much less, the motor will lock up instead of spin. This will
                                    // happen at different points for different loads. Experiment with this.
