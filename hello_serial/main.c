@@ -75,6 +75,5 @@ int main(void)
             uart_send(c);	                /* finish by sending the key pressed */
             uart_send_string("\n\r");       /* and a new line and CR. */
         }
-	}
-
+    }
 }
