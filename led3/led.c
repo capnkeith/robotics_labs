@@ -36,7 +36,7 @@ int main (void)             // decare the main function. All projects have this 
         PORTB = steps[i];   // set the B port for step i.
         i++;                // increment i by 1.
         if (i==4) i=0;      // if i is 4 (past the end of steps), set it back to 0.
-        _delay_us(200000);  // wait for 500,000 micro seconds, or one half second.   
+        _delay_us(500000);  // wait for 500,000 micro seconds, or one half second.   
     }
 }
 
