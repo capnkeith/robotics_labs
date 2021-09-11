@@ -46,9 +46,10 @@
 #include <avr/io.h>         // include to access port IO
 #include <util/delay.h>     // for _delay_us() 
 
-uint8_t steps[] = {0b0001, 0b0010, 0b0100, 0b1000}; //full steps. Minimum delay per step is about 2000us.
-//uint8_t steps[] = {0b1000,0b1100,0b0100,0b0110,0b0010,0b0011,0b0001,0b1001}; // half steps. You can delay as little as 900us with half-steps.
-//uint8_t steps[] = {0b1010, 0b0110, 0b0101, 0b1001}; // bipolar
+// comment in one of these only.
+//uint8_t steps[] = {0b0001, 0b0010, 0b0100, 0b1000}; // wave drive 
+uint8_t steps[] = {0b1000,0b1100,0b0100,0b0110,0b0010,0b0011,0b0001,0b1001}; // half steps. You can delay as little as 900us with half-steps.
+//uint8_t steps[] = {0b1100, 0b0110, 0b0011, 0b1001};   // full steps. Min delay 2000
 
 int main (void)                     // decare the main function. All projects have this it is called first.
 {                   
@@ -59,7 +60,7 @@ int main (void)                     // decare the main function. All projects ha
         PORTB = steps[i];
         i++;
         if (i==sizeof(steps)) i=0; // If I use sizeof instead of 8 then it works if I change steps[] to full steps...
-        _delay_us(50000);           // here you cannot see the LEDs at all because they are moving too fast.
+        _delay_us(900);            // here you cannot see the LEDs at all because they are moving too fast.
                                    // this is maximum stpeed for the stepper motors we use (28BYJ-48). 
                                    // if you delay much less, the motor will lock up instead of spin. This will
                                    // happen at different points for different loads. Experiment with this.
