@@ -1,0 +1,93 @@
+   1               		.file	"main.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.global	init_uart
+  10               	init_uart:
+  11               	/* prologue: function */
+  12               	/* frame size = 0 */
+  13               	/* stack size = 0 */
+  14               	.L__stack_usage = 0
+  15 0000 1092 C500 		sts 197,__zero_reg__
+  16 0004 8CE0      		ldi r24,lo8(12)
+  17 0006 8093 C400 		sts 196,r24
+  18 000a 88E1      		ldi r24,lo8(24)
+  19 000c 8093 C100 		sts 193,r24
+  20 0010 82E2      		ldi r24,lo8(34)
+  21 0012 8093 C000 		sts 192,r24
+  22 0016 86E0      		ldi r24,lo8(6)
+  23 0018 8093 C200 		sts 194,r24
+  24               	/* epilogue start */
+  25 001c 0895      		ret
+  27               	.global	USART_Receive
+  29               	USART_Receive:
+  30               	/* prologue: function */
+  31               	/* frame size = 0 */
+  32               	/* stack size = 0 */
+  33               	.L__stack_usage = 0
+  34               	.L3:
+  35 001e 8091 C000 		lds r24,192
+  36 0022 87FF      		sbrs r24,7
+  37 0024 00C0      		rjmp .L3
+  38 0026 8091 C600 		lds r24,198
+  39               	/* epilogue start */
+  40 002a 0895      		ret
+  42               	.global	USART_Transmit
+  44               	USART_Transmit:
+  45               	/* prologue: function */
+  46               	/* frame size = 0 */
+  47               	/* stack size = 0 */
+  48               	.L__stack_usage = 0
+  49               	.L6:
+  50 002c 9091 C000 		lds r25,192
+  51 0030 95FF      		sbrs r25,5
+  52 0032 00C0      		rjmp .L6
+  53 0034 8093 C600 		sts 198,r24
+  54               	/* epilogue start */
+  55 0038 0895      		ret
+  57               		.section	.text.startup,"ax",@progbits
+  58               	.global	main
+  60               	main:
+  61               	/* prologue: function */
+  62               	/* frame size = 0 */
+  63               	/* stack size = 0 */
+  64               	.L__stack_usage = 0
+  65 0000 84E0      		ldi r24,lo8(4)
+  66 0002 9DE0      		ldi r25,lo8(13)
+  67 0004 0E94 0000 		call init_uart
+  68 0008 579A      		sbi 0xa,7
+  69               	.L10:
+  70 000a 8BB1      		in r24,0xb
+  71 000c 8058      		subi r24,lo8(-(-128))
+  72 000e 8BB9      		out 0xb,r24
+  73 0010 88E7      		ldi r24,lo8(120)
+  74 0012 0E94 0000 		call USART_Transmit
+  75 0016 8CE6      		ldi r24,lo8(108)
+  76 0018 0E94 0000 		call USART_Transmit
+  77 001c 2FEF      		ldi r18,lo8(1599999)
+  78 001e 89E6      		ldi r24,hi8(1599999)
+  79 0020 98E1      		ldi r25,hlo8(1599999)
+  80 0022 2150      	1:	subi r18,1
+  81 0024 8040      		sbci r24,0
+  82 0026 9040      		sbci r25,0
+  83 0028 01F4      		brne 1b
+  84 002a 00C0      		rjmp .
+  85 002c 0000      		nop
+  86 002e 00C0      		rjmp .L10
+  88               		.ident	"GCC: (Homebrew AVR GCC 9.3.0_3) 9.3.0"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccUF8OnM.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccUF8OnM.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccUF8OnM.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccUF8OnM.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccUF8OnM.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccUF8OnM.s:10     .text:0000000000000000 init_uart
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccUF8OnM.s:29     .text:000000000000001e USART_Receive
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccUF8OnM.s:44     .text:000000000000002c USART_Transmit
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccUF8OnM.s:60     .text.startup:0000000000000000 main
+
+NO UNDEFINED SYMBOLS

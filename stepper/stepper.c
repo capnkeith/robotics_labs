@@ -60,7 +60,7 @@ int main (void)                     // decare the main function. All projects ha
         PORTB = steps[i];
         i++;
         if (i==sizeof(steps)) i=0; // If I use sizeof instead of 8 then it works if I change steps[] to full steps...
-        _delay_us(900);            // here you cannot see the LEDs at all because they are moving too fast.
+        _delay_us(9000);            // here you cannot see the LEDs at all because they are moving too fast.
                                    // this is maximum stpeed for the stepper motors we use (28BYJ-48). 
                                    // if you delay much less, the motor will lock up instead of spin. This will
                                    // happen at different points for different loads. Experiment with this.

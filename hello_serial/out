@@ -1,0 +1,740 @@
+  PID TTY           TIME CMD
+    1 ??         0:29.40 /sbin/launchd
+   76 ??         0:02.23 /usr/sbin/syslogd
+   77 ??         0:02.50 /usr/libexec/UserEventAgent (System)
+   79 ??         0:01.01 /Applications/QualysCloudAgent.app/Contents/MacOS/qualys-cloud-agent
+   81 ??         0:00.60 /System/Library/PrivateFrameworks/Uninstall.framework/Resources/uninstalld
+   82 ??         0:27.67 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/Support/fseventsd
+   83 ??         0:00.61 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted
+   86 ??         0:13.42 /usr/sbin/systemstats --daemon
+   88 ??         0:13.61 /usr/libexec/configd
+   89 ??         0:00.25 endpointsecurityd
+   90 ??         0:16.65 /System/Library/CoreServices/powerd.bundle/powerd
+   93 ??         0:02.89 /usr/libexec/remoted
+   95 ??         0:13.71 /usr/libexec/logd
+   96 ??         0:00.11 /usr/libexec/keybagd -t 15
+   99 ??         0:00.15 /System/Library/PrivateFrameworks/MobileSoftwareUpdate.framework/Support/softwareupdated
+  101 ??         0:00.86 /usr/libexec/watchdogd
+  105 ??         2:26.92 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds
+  106 ??         0:00.07 /System/Library/CoreServices/iconservicesd
+  107 ??         0:02.27 /usr/libexec/kernelmanagerd
+  108 ??         0:03.95 /usr/libexec/diskarbitrationd
+  112 ??         0:01.10 /usr/libexec/coreduetd
+  115 ??         0:00.03 /usr/libexec/thermalmonitord
+  116 ??         0:05.84 /System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/contextstored
+  117 ??         0:19.22 /usr/libexec/opendirectoryd
+  118 ??         0:02.30 /System/Library/PrivateFrameworks/ApplePushService.framework/apsd
+  119 ??         0:02.73 /System/Library/CoreServices/launchservicesd
+  120 ??         0:00.60 /usr/libexec/timed
+  121 ??         0:00.12 /System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/Resources/usbmuxd -launchd
+  122 ??         0:01.29 /usr/sbin/securityd -i
+  123 ??         0:00.01 auditd -l
+  125 ??         0:01.63 /usr/libexec/locationd
+  127 ??         6:27.21 wdavdaemon privileged
+  128 ??         0:00.02 autofsd
+  129 ??         0:00.29 /usr/libexec/displaypolicyd -k 1
+  130 ??         0:10.46 /usr/libexec/dasd
+  132 ??         0:00.66 /usr/sbin/distnoted daemon
+  133 ??         0:00.05 /System/Library/PrivateFrameworks/AppleCredentialManager.framework/AppleCredentialManagerDaemon
+  136 ??         0:00.11 /Library/Tanium/TaniumClient/TaniumClient -d
+  137 ??         0:00.06 /System/Library/CoreServices/logind
+  138 ??         0:00.13 /System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond
+  139 ??         0:00.02 /usr/sbin/KernelEventAgent
+  141 ??         0:01.31 /usr/sbin/bluetoothd
+  142 ??         0:06.15 /usr/sbin/notifyd
+  143 ??         0:05.95 /usr/libexec/sandboxd
+  144 ??         0:00.55 /usr/libexec/corebrightnessd --launchd
+  145 ??         0:17.81 /usr/libexec/AirPlayXPCHelper
+  147 ??         0:01.99 /usr/libexec/amfid
+  148 ??         2:15.98 /usr/libexec/syspolicyd
+  149 ??         0:07.27 /usr/sbin/cfprefsd daemon
+  150 ??         0:00.45 /System/Library/CoreServices/coreservicesd
+  155 ??        35:33.38 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer -daemon
+  161 ??         0:00.03 aslmanager
+  180 ??         0:02.75 /System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd
+  181 ??         0:00.39 /usr/libexec/PowerUIAgent
+  182 ??         0:47.96 /System/Library/PrivateFrameworks/TCC.framework/Resources/tccd system
+  183 ??         0:00.20 /System/Library/Frameworks/SystemExtensions.framework/Versions/A/Helpers/sysextd
+  188 ??         0:02.60 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd
+  196 ??         1:45.70 /usr/libexec/trustd
+  206 ??         0:00.10 /usr/sbin/distnoted agent
+  207 ??         0:00.29 /usr/libexec/nehelper
+  208 ??         0:09.95 /usr/libexec/symptomsd
+  211 ??         0:00.36 /usr/libexec/findmydeviced
+  221 ??         0:01.51 /usr/libexec/lsd runAsRoot
+  222 ??         0:34.36 /usr/sbin/coreaudiod
+  229 ??         0:02.82 /usr/libexec/mobileassetd
+  231 ??         0:00.09 /usr/sbin/distnoted agent
+  233 ??         0:00.02 /usr/libexec/multiversed
+  234 ??         0:16.85 /System/Library/CryptoTokenKit/com.apple.ifdreader.slotd/Contents/MacOS/com.apple.ifdreader
+  235 ??         0:05.69 /usr/libexec/runningboardd
+  236 ??         0:00.10 /usr/libexec/apfsd
+  237 ??         0:03.11 /usr/libexec/airportd
+  238 ??         0:00.53 /usr/libexec/usbd
+  241 ??         0:27.29 /System/Library/Frameworks/CoreMediaIO.framework/Resources/VDC.plugin/Contents/Resources/VDCAssistant
+  242 ??         1:20.04 /usr/libexec/nsurlsessiond --privileged
+  243 ??         0:29.18 /System/Library/CryptoTokenKit/com.apple.ifdreader.slotd/Contents/XPCServices/com.apple.ifdbundle.xpc/Contents/MacOS/com.apple.ifdbundle
+  244 ??         0:00.08 /System/Library/CoreServices/backupd.bundle/Contents/Resources/backupd
+  245 ??         0:00.14 /usr/libexec/logd_helper
+  246 ??         0:00.35 /usr/libexec/nesessionmanager
+  247 ??         0:00.03 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd -s
+  248 ??         0:00.07 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+  249 ??         0:00.02 /System/Library/PrivateFrameworks/BridgeOSInstallReporting.framework/Resources/bosreporter
+  250 ??         0:00.08 /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd
+  251 ??         0:00.14 /System/Library/PrivateFrameworks/BridgeOSSoftwareUpdate.framework/Support/bosUpdateProxy
+  253 ??         0:00.31 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/com.apple.CodeSigningHelper.xpc/Contents/MacOS/com.apple.CodeSigningHelper
+  254 ??         0:15.78 /usr/sbin/mDNSResponder
+  256 ??         0:00.87 /usr/sbin/mDNSResponderHelper
+  259 ??         0:03.71 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow console
+  263 ??         0:26.36 /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+  264 ??         0:01.26 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+  265 ??         0:00.11 /usr/sbin/distnoted agent
+  266 ??         0:00.06 /usr/libexec/secinitd
+  268 ??         0:00.16 /usr/libexec/searchpartyd
+  269 ??         0:00.35 /usr/libexec/diskmanagementd
+  271 ??         0:00.02 /usr/sbin/cfprefsd agent
+  272 ??         0:00.18 /usr/libexec/trustd --agent
+  273 ??         0:00.01 /usr/libexec/smd
+  276 ??         0:00.01 /System/Library/Frameworks/CoreAudio.framework/Versions/A/XPCServices/com.apple.audio.DriverHelper.xpc/Contents/MacOS/com.apple.audio.DriverHelper
+  278 ??         0:00.07 /usr/libexec/containermanagerd --runmode=agent --bundle-container-mode=global --bundle-container-owner=_appinstalld --system-container-mode=none
+  280 ??         0:00.07 /System/Library/Frameworks/AudioToolbox.framework/AudioComponentRegistrar -daemon
+  282 ??         0:00.01 /System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.SandboxHelper.xpc/Contents/MacOS/com.apple.audio.SandboxHelper
+  285 ??         3:35.51 /Library/SystemExtensions/A091FA1A-0787-4AD3-B6FE-980719A2072F/com.microsoft.wdav.epsext.systemextension/Contents/MacOS/epsext
+  286 ??         0:20.63 /Library/SystemExtensions/8C33BFB2-C748-46CF-8DD1-56663ECE513B/com.microsoft.wdav.netext.systemextension/Contents/MacOS/netext
+  287 ??         0:00.68 /usr/libexec/containermanagerd --runmode=agent --bundle-container-mode=global --bundle-container-owner=_appinstalld --system-container-mode=none
+  289 ??         0:00.08 /usr/libexec/secinitd
+  290 ??         0:00.07 /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd
+  291 ??         0:00.08 /usr/sbin/distnoted agent
+  292 ??         0:00.23 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd
+  293 ??         1:10.71 /Library/Tanium/TaniumClient/TaniumClient -m
+  296 ??         0:00.59 /usr/libexec/taskgated
+  297 ??         0:00.09 /usr/sbin/distnoted agent
+  304 ??         0:01.98 /usr/libexec/sysmond
+  357 ??         3:49.92 /Applications/Microsoft Defender ATP.app/Contents/MacOS/wdavdaemon_enterprise.app/Contents/MacOS/wdavdaemon_enterprise edr 9 8
+  365 ??         0:00.13 /System/Library/PrivateFrameworks/CoreKDL.framework/Support/corekdld
+  374 ??         0:00.32 /System/Library/CoreServices/SubmitDiagInfo server-init
+  380 ??         0:00.51 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Support/fontworker
+  442 ??         0:00.01 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService
+  445 ??         0:00.06 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x100000719
+  446 ??         0:00.05 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x100000725
+  447 ??         2:29.54 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDeviceKB 0x100000733
+  448 ??         0:00.04 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x100000722
+  450 ??         0:00.04 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x100000742
+  451 ??         2:07.10 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mds_stores
+  452 ??         0:00.04 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x100000744
+  453 ??         0:00.03 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x10000072d
+  456 ??         0:00.03 /System/Library/DriverExtensions/com.apple.DriverKit.AppleUserECMData.dext/com.apple.DriverKit.AppleUserECMData com.apple.DriverKit.AppleUserECMData 0x10000076f
+  457 ??         0:35.33 /System/Library/DriverExtensions/com.apple.DriverKit.AppleUserECM.dext/com.apple.DriverKit.AppleUserECM com.apple.DriverKit.AppleUserECM 0x100000758
+  459 ??         0:00.08 /System/Library/CoreServices/backupd.bundle/Contents/Resources/backupd-helper -launchd
+  461 ??         1:02.65 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice1 0x100000782
+  462 ??         2:44.93 /System/Library/DriverExtensions/com.apple.DriverKit.AppleUserECM.dext/com.apple.DriverKit.AppleUserECM com.apple.DriverKit.AppleUserECM 0x10000078a
+  463 ??         0:00.02 /System/Library/DriverExtensions/com.apple.DriverKit.AppleUserECMData.dext/com.apple.DriverKit.AppleUserECMData com.apple.DriverKit.AppleUserECMData 0x100000785
+  466 ??         0:00.02 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x100000798
+  468 ??         0:00.02 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserHIDEventDriver 0x10000088b
+  470 ??         1:13.11 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserHIDEventDriver 0x10000088f
+  471 ??         0:52.07 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserHIDEventDriver 0x100000891
+  472 ??         0:00.01 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserHIDEventDriver.dfrv2 0x1000008ad
+  473 ??         0:00.01 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserHIDEventDriver 0x1000008c2
+  474 ??         0:00.11 /usr/sbin/distnoted agent
+  478 ??         0:00.29 /usr/sbin/netbiosd
+  480 ??         0:00.08 /usr/libexec/thermald
+  482 ??         0:00.06 /System/Library/PrivateFrameworks/MobileSoftwareUpdate.framework/Versions/A/XPCServices/com.apple.MobileSoftwareUpdate.CleanupPreparePathService.xpc/Contents/MacOS/com.apple.MobileSoftwareUpdate.CleanupPreparePathService
+  483 ??         0:00.22 /usr/libexec/hidd
+  485 ??         0:00.08 /usr/sbin/distnoted agent
+  487 ??         0:19.40 /Applications/Microsoft Defender ATP.app/Contents/MacOS/wdavdaemon_enterprise.app/Contents/Frameworks/telemetryd_v1 https://us-v20.events.data.microsoft.com/ 193ef306-15a1-4cdc-bd52-e66a2f09d806 Microsoft.Windows.Sense.Client. {"StatisticsReportPeriodInSeconds":300} 20.199999.6417666.6350895.5417992-235ddcab39eb39a07de89164601f9ae857a151a8 2
+  490 ??         0:00.10 /private/var/db/com.apple.xpc.roleaccountd.staging/com.apple.MobileSoftwareUpdate.UpdateBrainService.16777221.2239505.xpc/Contents/MacOS/com.apple.MobileSoftwareUpdate.UpdateBrainService
+  491 ??         0:00.26 /usr/libexec/xpcroleaccountd -launchd
+  492 ??         0:00.62 /usr/libexec/TouchBarServer
+  494 ??         0:00.33 /usr/libexec/colorsync.displayservices
+  495 ??         0:00.12 /usr/libexec/colorsyncd
+  496 ??         0:00.22 /System/Library/CoreServices/appleeventsd --server
+  499 ??         0:00.04 /System/Library/CoreServices/ReportCrash daemon
+  501 ??         0:09.00 /System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/XPCServices/ViewBridgeAuxiliary.xpc/Contents/MacOS/ViewBridgeAuxiliary
+  502 ??         0:00.03 /usr/libexec/bootinstalld
+  507 ??         0:00.08 /usr/sbin/distnoted agent
+  508 ??         0:00.34 /usr/sbin/systemstats --logger-helper /private/var/db/systemstats
+  509 ??         0:00.02 /System/Library/PrivateFrameworks/AccountPolicy.framework/XPCServices/com.apple.AccountPolicyHelper.xpc/Contents/MacOS/com.apple.AccountPolicyHelper
+  510 ??         0:00.01 /System/Library/Frameworks/CoreMediaIO.framework/Versions/A/XPCServices/com.apple.cmio.registerassistantservice.xpc/Contents/MacOS/com.apple.cmio.registerassistantservice
+  514 ??         0:00.06 /System/Library/Frameworks/GSS.framework/Helpers/GSSCred
+  515 ??         0:00.07 /usr/sbin/distnoted agent
+  520 ??         0:29.35 /Library/Tanium/TaniumClient/TaniumCX run --purpose libTaniumSoftwareManager.dylib
+  522 ??         9:14.05 /Applications/Microsoft Defender ATP.app/Contents/MacOS/wdavdaemon_unprivileged.app/Contents/MacOS/wdavdaemon_unprivileged unprivileged_v1 15 14
+  523 ??         0:05.00 /Library/Tanium/TaniumClient/TaniumCX run --purpose libTaniumEnforce.dylib
+  526 ??         0:14.63 /Library/Tanium/TaniumClient/TaniumCX run --purpose libTaniumConfig.dylib
+  527 ??         6:30.58 /System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XPCServices/XprotectService.xpc/Contents/MacOS/XprotectService
+  529 ??         0:00.21 /usr/libexec/biometrickitd --launchd
+  530 ??         0:01.95 /usr/sbin/distnoted agent
+  531 ??         0:05.63 /usr/sbin/cfprefsd agent
+  532 ??         0:00.04 /usr/libexec/securityd_service
+  533 ??         0:00.03 /usr/libexec/biokitaggdd
+  534 ??         0:04.91 /Library/Tanium/TaniumClient/TaniumCX run --purpose libTaniumDEC.dylib
+  535 ??         0:09.67 /Library/Tanium/TaniumClient/TaniumCX run --purpose libSupportCX.dylib
+  536 ??         0:04.87 /Library/Tanium/TaniumClient/TaniumCX run --purpose libTaniumProtect.dylib
+  537 ??         0:02.41 /usr/libexec/UserEventAgent (Aqua)
+  540 ??         0:01.42 /usr/libexec/lsd
+  541 ??         0:00.02 /System/Library/PrivateFrameworks/CloudServices.framework/Helpers/com.apple.sbd
+  542 ??         0:01.26 /usr/libexec/knowledge-agent
+  545 ??         0:00.74 /usr/sbin/usernoted
+  548 ??         0:02.20 /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd
+  549 ??         0:01.38 /usr/libexec/secd
+  550 ??         0:00.04 /System/Library/CoreServices/backgroundtaskmanagementagent
+  551 ??         0:06.18 /System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter
+  552 ??         0:01.13 /System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter -L
+  553 ??         0:07.17 /usr/libexec/trustd --agent
+  554 ??         0:00.01 /System/Library/CoreServices/APFSUserAgent
+  555 ??         0:04.12 /System/Library/CoreServices/lockoutagent
+  556 ??         0:00.13 /usr/libexec/networkserviceproxy
+  557 ??         0:01.84 /usr/libexec/nsurlsessiond
+  558 ??         0:00.47 /usr/libexec/rapportd
+  559 ??         0:00.74 /usr/libexec/secinitd
+  560 ??         0:02.38 /System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/ContextStoreAgent
+  561 ??         0:01.41 /System/Library/PrivateFrameworks/CalendarAgent.framework/Executables/CalendarAgent
+  562 ??         0:02.03 /System/Library/CoreServices/ControlStrip.app/Contents/MacOS/ControlStrip
+  563 ??         0:00.38 /usr/libexec/dmd
+  564 ??         0:02.90 /System/Library/PrivateFrameworks/ScreenTimeCore.framework/Versions/A/ScreenTimeAgent
+  565 ??         0:03.07 /usr/libexec/routined LAUNCHED_BY_LAUNCHD
+  566 ??         0:01.04 /System/Library/PreferencePanes/Displays.prefPane/Contents/Resources/MirrorDisplays.app/Contents/MacOS/MirrorDisplays
+  567 ??         0:02.51 /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent
+  568 ??         0:01.25 /System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd
+  569 ??         0:03.87 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/XPCServices/com.apple.hiservices-xpcservice.xpc/Contents/MacOS/com.apple.hiservices-xpcservice
+  570 ??         0:02.78 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd
+  571 ??         0:00.26 /usr/libexec/diagnosticextensionsd
+  573 ??         0:00.71 /System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/Support/assistantd
+  574 ??         0:00.54 /usr/libexec/adprivacyd
+  575 ??         0:00.79 /System/Library/PrivateFrameworks/AppSSO.framework/Support/AppSSOAgent.app/Contents/MacOS/AppSSOAgent
+  576 ??         0:00.07 /System/Library/Frameworks/Security.framework/Versions/A/Resources/CloudKeychainProxy.bundle/Contents/MacOS/CloudKeychainProxy
+  577 ??         0:00.15 /usr/sbin/WirelessRadioManagerd
+  578 ??         0:00.76 /usr/libexec/containermanagerd --runmode=agent --bundle-container-mode=global --bundle-container-owner=_appinstalld --system-container-mode=none
+  580 ??         0:01.04 /System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd
+  581 ??         0:00.75 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Support/fontworker
+  582 ??         0:01.38 /usr/libexec/pkd
+  583 ??         0:00.39 /System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification
+  584 ??         0:00.30 /System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Helpers/ProtectedCloudKeySyncing
+  585 ??         0:00.04 /System/Library/PrivateFrameworks/CoreCDP.framework/Versions/A/Resources/cdpd
+  587 ??         0:00.14 /System/Library/PrivateFrameworks/CoreEmbeddedSpeechRecognition.framework/Versions/A/XPCServices/com.apple.siri.embeddedspeech.xpc/Contents/MacOS/com.apple.siri.embeddedspeech
+  588 ??         0:00.93 /System/Library/CoreServices/talagent
+  589 ??         0:00.18 /usr/libexec/pboard
+  590 ??         0:01.90 /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+  591 ??         0:00.50 /System/Library/PrivateFrameworks/ContextKit.framework/Versions/A/XPCServices/ContextService.xpc/Contents/MacOS/ContextService
+  592 ??         0:00.12 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd -tw
+  593 ??         0:00.48 /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/Contents/MacOS/imagent
+  594 ??         0:08.43 /System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/XPCServices/ViewBridgeAuxiliary.xpc/Contents/MacOS/ViewBridgeAuxiliary
+  597 ??         0:01.00 /System/Library/PrivateFrameworks/TCC.framework/Resources/tccd
+  598 ??         0:00.25 /System/Library/PrivateFrameworks/IMDPersistence.framework/XPCServices/IMDPersistenceAgent.xpc/Contents/MacOS/IMDPersistenceAgent
+  599 ??         0:00.80 /System/Library/PrivateFrameworks/iTunesCloud.framework/Support/itunescloudd
+  600 ??         0:00.78 /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd
+  601 ??         0:00.34 /System/Library/Frameworks/AddressBook.framework/Executables/ContactsAccountsService
+  602 ??         0:00.42 /System/Library/PrivateFrameworks/CalendarNotification.framework/Versions/A/XPCServices/CalNCService.xpc/Contents/MacOS/CalNCService
+  603 ??         0:00.01 /bin/sh python27/python Tools/SoftwareManagement/py/swmgr/main.py process start-fg
+  607 ??         0:00.26 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  608 ??         0:00.40 /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd
+  609 ??         0:50.80 /Library/Tanium/TaniumClient/python27/bin/pybin -E Tools/SoftwareManagement/py/swmgr/main.py process start-fg
+  610 ??         0:00.03 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoteagent
+  611 ??         0:00.17 /usr/libexec/fmfd
+  612 ??         0:00.25 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  613 ??         0:01.43 /usr/libexec/sharingd
+  614 ??         0:00.24 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  615 ??         0:00.09 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  616 ??         0:00.38 /System/Library/CoreServices/sharedfilelistd
+  617 ??         0:00.44 /System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd
+  618 ??         0:00.09 /System/Library/PrivateFrameworks/CoreADI.framework/adid
+  621 ??         0:00.24 /System/Library/PrivateFrameworks/FamilyCircle.framework/Versions/A/Resources/familycircled
+  622 ??         0:00.06 /Applications/Microsoft Outlook.app/Contents/PlugIns/CalendarWidgetExtension.appex/Contents/MacOS/CalendarWidgetExtension
+  623 ??         0:00.29 /System/Library/CoreServices/CoreLocationAgent.app/Contents/MacOS/CoreLocationAgent
+  625 ??         0:00.09 /System/Library/CoreServices/pbs
+  626 ??         0:00.05 /System/Library/PrivateFrameworks/Categories.framework/Versions/A/XPCServices/CategoriesService.xpc/Contents/MacOS/CategoriesService
+  627 ??         0:02.16 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+  629 ??         0:00.33 /System/Library/CoreServices/CoreServicesUIAgent.app/Contents/MacOS/CoreServicesUIAgent
+  631 ??         0:00.05 /usr/sbin/spindump
+  632 ??         0:01.62 /System/Applications/System Preferences.app/Contents/MacOS/System Preferences
+  633 ??         0:00.59 /System/Library/CoreServices/iconservicesagent
+  634 ??         0:00.02 /usr/libexec/spindump_agent
+  635 ??         0:00.39 /usr/sbin/filecoordinationd
+  637 ??         0:06.37 /Applications/Wondershare DemoCreator.app/Contents/MacOS/Wondershare DemoCreator
+  640 ??         0:00.01 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService
+  641 ??        30:14.29 /Applications/Firefox.app/Contents/MacOS/firefox
+  642 ??         0:01.21 /Applications/Safari.app/Contents/MacOS/Safari
+  644 ??         0:06.46 /System/Applications/App Store.app/Contents/MacOS/App Store
+  645 ??         0:00.36 /usr/libexec/mobileactivationd
+  646 ??         0:00.25 /System/Library/PrivateFrameworks/Categories.framework/Versions/A/XPCServices/CategoriesService.xpc/Contents/MacOS/CategoriesService
+  647 ??         1:25.52 /Applications/Microsoft Outlook.app/Contents/MacOS/Microsoft Outlook
+  651 ??         0:30.36 /Applications/Citrix Workspace.app/Contents/MacOS/Citrix Workspace
+  655 ??         0:00.03 /System/Library/PrivateFrameworks/CoreFollowUp.framework/Versions/A/Support/followupd
+  656 ??         0:00.03 /System/Library/PrivateFrameworks/SiriInference.framework/Support/siriinferenced
+  664 ??         0:00.37 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd
+  674 ??         3:02.16 /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal
+  678 ??         0:09.09 /Applications/Xcode.app/Contents/MacOS/Xcode
+  679 ??         0:00.19 /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/Support/bird
+  680 ??         0:01.34 /usr/libexec/swcd
+  681 ??         0:00.00 /Applications/Microsoft Teams.app/Contents/MacOS/Teams
+  683 ??         0:02.11 /Applications/Citrix SSO.app/Contents/MacOS/Citrix SSO
+  684 ??         0:00.96 /Users/sethk/Library/Caches/Citrix Receiver/Citrix Workspace Updater.app/Contents/MacOS/Citrix Workspace Updater
+  685 ??         0:16.53 /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock
+  686 ??         0:03.66 /System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter
+  687 ??         0:00.43 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
+  688 ??         0:07.89 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+  691 ??         0:24.65 /System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstored
+  694 ??         0:00.78 /usr/sbin/systemsoundserverd
+  695 ??         0:00.93 /System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/suggestd
+  696 ??         0:01.85 /System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent
+  697 ??         0:00.09 /System/Library/PrivateFrameworks/InstallCoordination.framework/Support/installcoordinationd
+  698 ??         0:01.21 /System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight
+  699 ??         0:00.09 /usr/sbin/distnoted agent
+  700 ??         0:00.56 /System/Library/PrivateFrameworks/AOSUI.framework/Versions/A/XPCServices/AccountProfileRemoteViewService.xpc/Contents/MacOS/AccountProfileRemoteViewService
+  701 ??         0:00.25 /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuickLookUI.framework/Versions/A/XPCServices/QuickLookUIService.xpc/Contents/MacOS/QuickLookUIService
+  707 ??         0:00.82 /usr/libexec/studentd
+  708 ??         0:00.26 /System/Library/Frameworks/ClassKit.framework/Versions/A/progressd
+  711 ??         0:00.43 /System/Library/PrivateFrameworks/Categories.framework/Versions/A/XPCServices/CategoriesService.xpc/Contents/MacOS/CategoriesService
+  718 ??         0:00.10 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+  719 ??         0:00.89 /System/Library/PrivateFrameworks/CoreParsec.framework/parsecd
+  721 ??         0:01.42 /System/Library/PrivateFrameworks/PassKitCore.framework/passd
+  724 ??         0:00.10 /System/Library/PrivateFrameworks/AMPDevices.framework/Versions/A/Support/AMPDeviceDiscoveryAgent --launchd
+  730 ??         0:00.10 /System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.History.xpc/Contents/MacOS/com.apple.Safari.History
+  732 ??         0:00.42 /usr/libexec/nfcd
+  733 ??         0:00.26 /System/Library/PrivateFrameworks/FileProvider.framework/Support/fileproviderd
+  738 ??         0:00.48 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/commerce
+  740 ??         0:00.51 /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+  741 ??         0:00.26 /usr/libexec/triald
+  742 ??         0:00.05 /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/CVMServer
+  744 ??         0:00.20 /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking
+  745 ??         0:01.68 /System/Library/PreferencePanes/Security.prefPane/Contents/XPCServices/com.apple.preference.security.remoteservice.xpc/Contents/MacOS/com.apple.preference.security.remoteservice
+  746 ??         0:00.06 /System/Library/PrivateFrameworks/AppStoreDaemon.framework/Versions/A/XPCServices/com.apple.AppStoreDaemon.StorePrivilegedTaskService.xpc/Contents/MacOS/com.apple.AppStoreDaemon.StorePrivilegedTaskService
+  747 ??         0:03.90 /Library/Apple/System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/SafariBookmarksSyncAgent
+  748 ??         0:00.11 /Library/Apple/System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/SafariLaunchAgent
+  749 ??         0:00.11 /usr/libexec/neagent
+  751 ??         0:00.01 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService
+  752 ??         0:00.01 /System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.SandboxHelper.xpc/Contents/MacOS/com.apple.audio.SandboxHelper
+  753 ??         0:00.58 /System/Library/CoreServices/Dock.app/Contents/XPCServices/com.apple.dock.extra.xpc/Contents/MacOS/com.apple.dock.extra
+  755 ??         0:00.26 /System/Library/Frameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent
+  758 ??         0:17.75 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 1 -isForBrowser -prefsLen 1 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.2097791805 tab
+  763 ??         0:00.05 /System/Library/PrivateFrameworks/CallHistory.framework/Support/CallHistoryPluginHelper
+  764 ??         0:00.39 /System/Library/PrivateFrameworks/PreferencePanesSupport.framework/PlugIns/PrivacyPhotos.appex/Contents/MacOS/PrivacyPhotos
+  765 ??         0:00.41 /System/Library/PrivateFrameworks/PreferencePanesSupport.framework/PlugIns/PrivacyAnalytics.appex/Contents/MacOS/PrivacyAnalytics
+  766 ??         0:00.38 /System/Library/PrivateFrameworks/PreferencePanesSupport.framework/PlugIns/AdvertisingExtension.appex/Contents/MacOS/AdvertisingExtension
+  767 ??         0:01.42 /usr/local/libexec/ServiceRecords.app/Contents/MacOS/ServiceRecords
+  768 ??         0:00.33 /System/Library/PrivateFrameworks/Categories.framework/Versions/A/XPCServices/CategoriesService.xpc/Contents/MacOS/CategoriesService
+  770 ??         0:00.02 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  771 ??         0:01.33 /System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/amsengagementd
+  773 ??         0:00.01 SafeEjectGPUAgent
+  774 ??         0:00.06 /System/Library/CoreServices/Menu Extras/SafeEjectGPUExtra.menu/Contents/XPCServices/SafeEjectGPUService.xpc/Contents/MacOS/SafeEjectGPUService
+  775 ??         0:06.37 /System/Library/PrivateFrameworks/AmbientDisplay.framework/Versions/A/XPCServices/com.apple.AmbientDisplayAgent.xpc/Contents/MacOS/com.apple.AmbientDisplayAgent
+  776 ??         0:44.72 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 2 -isForBrowser -prefsLen 167 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.2007260689 tab
+  777 ??         1:16.74 /usr/local/libexec/ReceiverHelper.app/Contents/MacOS/ReceiverHelper
+  778 ??         0:04.66 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 3 -isForBrowser -prefsLen 5303 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.1240373999 tab
+  781 ??         0:00.12 /usr/libexec/seld
+  782 ??         0:00.47 /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+  783 ??         0:00.13 /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking
+  785 ??         0:00.79 /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+  786 ??         0:00.05 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdwrite
+  788 ??         0:00.07 /usr/sbin/distnoted agent
+  806 ??         0:00.24 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+  811 ??         0:02.25 /usr/local/libexec/AuthManager_Mac.app/Contents/MacOS/AuthManager_Mac
+  868 ??         0:00.06 /usr/libexec/USBAgent
+  963 ??         0:01.26 /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+  964 ??         0:00.43 /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking
+  981 ??         0:14.69 /System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/com.apple.Safari.SafeBrowsing.Service
+ 1046 ??         0:00.04 /System/Library/PrivateFrameworks/SystemAdministration.framework/XPCServices/writeconfig.xpc/Contents/MacOS/writeconfig
+ 1220 ??         0:00.00 (TaniumClient)
+ 1361 ??         0:00.01 /Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/XPCServices/com.apple.dt.Xcode.DeveloperSystemPolicyService.xpc/Contents/MacOS/com.apple.dt.Xcode.DeveloperSystemPolicyService
+ 1363 ??         0:00.41 /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService
+ 1364 ??         0:00.18 /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/SimulatorTrampoline.xpc/Contents/MacOS/SimulatorTrampoline
+ 1365 ??         0:00.03 /System/Library/Frameworks/ColorSync.framework/Support/colorsync.useragent
+ 1366 ??         0:00.02 /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/SimLaunchHost.x86.xpc/Contents/MacOS/SimLaunchHost.x86
+ 1367 ??         0:15.33 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdbulkimport -s mdworker-bundle -c MDSImporterBundleFinder -m com.apple.metadata.mdbulkimport
+ 1368 ??         0:14.78 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdbulkimport -s mdworker-bundle -c MDSImporterBundleFinder -m com.apple.metadata.mdbulkimport
+ 1370 ??         0:00.05 /usr/libexec/pkd
+ 1371 ??         0:01.66 /usr/libexec/trustd --agent
+ 1373 ??         0:00.23 /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell
+ 1374 ??         0:00.16 /usr/libexec/keyboardservicesd
+ 1375 ??         0:01.04 /System/Library/CoreServices/ReportCrash agent
+ 1376 ??         0:00.06 /System/Library/PrivateFrameworks/CloudDocs.framework/PlugIns/com.apple.CloudDocs.MobileDocumentsFileProvider.appex/Contents/MacOS/com.apple.CloudDocs.MobileDocumentsFileProvider
+ 1379 ??         0:00.08 /usr/libexec/containermanagerd --runmode=agent --bundle-container-mode=global --bundle-container-owner=_appinstalld --system-container-mode=none
+ 1380 ??         0:00.03 /Applications/Xcode.app/Contents/SharedFrameworks/DVTSourceControl.framework/Versions/A/XPCServices/com.apple.dt.Xcode.sourcecontrol.SSHHelper.xpc/Contents/MacOS/com.apple.dt.Xcode.sourcecontrol.SSHHelper
+ 1383 ??         0:00.94 /System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd
+ 1386 ??         0:00.94 /Applications/Microsoft Defender ATP.app/Contents/MacOS/Microsoft Defender.app/Contents/MacOS/Microsoft Defender
+ 1391 ??         0:00.12 /System/Library/Frameworks/InputMethodKit.framework/Resources/imklaunchagent
+ 1392 ??         0:00.35 /System/Library/Image Capture/Support/icdd
+ 1393 ??         0:07.57 /Applications/Citrix Files.app/Contents/XPCServices/CitrixFilesENSService.app/Contents/MacOS/CitrixFilesENSService
+ 1394 ??         0:00.63 /System/Library/PrivateFrameworks/AskPermission.framework/Versions/A/Resources/askpermissiond
+ 1396 ??         0:00.27 /System/Library/CoreServices/AirPlayUIAgent.app/Contents/MacOS/AirPlayUIAgent --launchd
+ 1397 ??         0:00.34 /System/Library/CoreServices/cloudpaird
+ 1398 ??         0:00.39 /System/Library/CoreServices/diagnostics_agent
+ 1399 ??         0:00.47 /System/Library/CoreServices/TextInputMenuAgent.app/Contents/MacOS/TextInputMenuAgent
+ 1400 ??         0:00.83 /System/Library/PrivateFrameworks/AppleMediaServices.framework/Resources/amsaccountsd
+ 1401 ??         0:00.05 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp -d
+ 1403 ??         0:00.05 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp
+ 1406 ??         0:01.12 /Applications/Xcode.app/Contents/SharedFrameworks/XCBuild.framework/Versions/A/PlugIns/XCBBuildService.bundle/Contents/MacOS/XCBBuildService
+ 1407 ??         0:00.34 /System/Library/CoreServices/TextInputSwitcher.app/Contents/MacOS/TextInputSwitcher
+ 1412 ??         0:00.50 /System/Library/PrivateFrameworks/HomeKitDaemon.framework/Support/homed
+ 1414 ??         0:00.01 /System/Library/CoreServices/CrashReporterSupportHelper server-init
+ 1416 ??         0:00.06 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/GPUToolsPlatform/GPUToolsAgent.app/Contents/MacOS/GPUToolsAgent
+ 1423 ??         0:00.03 /Applications/Xcode.app/Contents/SharedFrameworks/DVTKeychainService.framework/Versions/A/XPCServices/com.apple.dt.Xcode.KeychainService.xpc/Contents/MacOS/com.apple.dt.Xcode.KeychainService
+ 1424 ??         0:03.58 /Applications/Xcode.app/Contents/SharedFrameworks/SourceKit.framework/Versions/A/XPCServices/com.apple.dt.SKAgent.xpc/Contents/MacOS/com.apple.dt.SKAgent
+ 1433 ??         0:00.01 /usr/libexec/misagent
+ 1444 ??         0:00.07 /usr/sbin/distnoted agent
+ 1465 ??         0:00.26 /System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd
+ 1469 ??         0:00.05 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/system_installd
+ 1470 ??         0:22.01 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/installd
+ 1471 ??         0:00.02 /Applications/Xcode.app/Contents/SharedFrameworks/DVTSourceControl.framework/Versions/A/XPCServices/com.apple.dt.Xcode.sourcecontrol.WorkingCopyScanner.xpc/Contents/MacOS/com.apple.dt.Xcode.sourcecontrol.WorkingCopyScanner
+ 1477 ??         0:00.31 /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/XPCServices/package_script_service.xpc/Contents/MacOS/package_script_service
+ 1488 ??         0:00.77 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService
+ 1491 ??         0:00.23 /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuickLookUI.framework/Versions/A/XPCServices/QuickLookUIService.xpc/Contents/MacOS/QuickLookUIService
+ 1492 ??         0:00.49 /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Resources/SoftwareUpdateNotificationManager.app/Contents/MacOS/SoftwareUpdateNotificationManager
+ 1606 ??         0:00.41 /usr/libexec/rtcreportingd
+ 1611 ??         0:00.00 (TaniumClient)
+ 1623 ??         0:00.00 (TaniumClient)
+ 1653 ??         0:00.01 /usr/libexec/online-authd
+ 2065 ??         0:12.91 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker-sizing -c MDSSizingWorker -m com.apple.mdworker.sizing
+ 2170 ??         0:04.78 /Library/Tanium/TaniumClient/TaniumCX run-script-child
+ 2262 ??         1:48.58 /usr/libexec/gamecontrollerd
+ 2458 ??         0:00.07 /System/Library/Frameworks/AudioToolbox.framework/AudioComponentRegistrar
+ 2459 ??         0:00.17 /System/Library/Frameworks/AudioToolbox.framework/XPCServices/CarbonComponentScannerXPC.xpc/Contents/MacOS/CarbonComponentScannerXPC
+ 2619 ??         0:07.71 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService
+ 2620 ??         0:00.32 /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuickLookUI.framework/Versions/A/XPCServices/QuickLookUIService.xpc/Contents/MacOS/QuickLookUIService
+ 2640 ??         0:00.01 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService
+ 2646 ??         0:00.08 /System/Library/Frameworks/QuickLook.framework/Versions/A/XPCServices/QuickLookSatellite.xpc/Contents/MacOS/QuickLookSatellite
+ 2694 ??         3:29.49 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 4 -isForBrowser -prefsLen 6845 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.1788346240 tab
+ 2814 ??         3:52.87 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 5 -isForBrowser -prefsLen 6859 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.1421277639 tab
+ 3947 ??         0:17.08 /System/Applications/News.app/Contents/PlugIns/NewsToday2.appex/Contents/MacOS/NewsToday2
+ 3951 ??         0:00.66 /System/Library/CoreServices/UIKitSystem.app/Contents/MacOS/UIKitSystem system_app_start
+ 4490 ??         0:00.00 (TaniumClient)
+ 4495 ??         0:00.00 (TaniumClient)
+ 5031 ??         0:00.01 /System/Library/PrivateFrameworks/InstallerDiagnostics.framework/Versions/A/Resources/installerdiagd
+ 5576 ??         0:00.18 /System/Library/PrivateFrameworks/CoreLSKD.framework/Versions/A/lskdd
+ 5577 ??         0:03.93 /Library/Apple/System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/PasswordBreachAgent
+ 5671 ??         0:00.00 (TaniumClient)
+ 5858 ??         0:00.00 (TaniumClient)
+ 5868 ??         0:00.00 (TaniumClient)
+ 5934 ??         0:00.00 (TaniumClient)
+ 6488 ??         0:00.00 (TaniumClient)
+ 6666 ??         0:00.00 (TaniumClient)
+ 6671 ??         0:00.00 (TaniumClient)
+ 6733 ??         0:00.00 (TaniumClient)
+ 6878 ??         0:00.00 (TaniumClient)
+ 6883 ??         0:00.00 (TaniumClient)
+ 7295 ??         0:00.00 (TaniumClient)
+ 7414 ??         0:00.00 (TaniumClient)
+ 7423 ??         0:00.00 (TaniumClient)
+ 7495 ??         0:00.00 (TaniumClient)
+ 7817 ??         0:00.00 (TaniumClient)
+ 8208 ??         0:00.00 (TaniumClient)
+ 8384 ??         0:00.00 (TaniumClient)
+ 8473 ??         0:09.99 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 6 -isForBrowser -prefsLen 9556 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.1163026454 tab
+ 8892 ??         0:00.00 (TaniumClient)
+ 9098 ??         0:00.00 (TaniumClient)
+ 9165 ??         0:04.09 /System/Library/CoreServices/Screen Time.app/Contents/PlugIns/ScreenTimeWidgetExtension.appex/Contents/MacOS/ScreenTimeWidgetExtension
+ 9166 ??         0:00.51 /System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTrackingAgent
+ 9167 ??         0:00.24 /System/Library/PrivateFrameworks/Categories.framework/Versions/A/XPCServices/CategoriesService.xpc/Contents/MacOS/CategoriesService
+ 9740 ??         0:00.00 (TaniumClient)
+ 9949 ??         0:00.06 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+ 9950 ??         0:00.20 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+15666 ??         0:06.22 /System/Library/CoreServices/Dock.app/Contents/XPCServices/DockHelper.xpc/Contents/MacOS/DockHelper
+15688 ??         0:21.56 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 7 -isForBrowser -prefsLen 9874 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.1561388795 tab
+16680 ??         0:00.00 (TaniumClient)
+16715 ??         0:00.00 (TaniumClient)
+16716 ??         0:00.09 /usr/libexec/siriknowledged
+17025 ??         0:48.06 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 8 -isForBrowser -prefsLen 9888 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.366597184 tab
+17140 ??         0:03.39 /System/Library/CoreServices/ClimateProxy.app/Contents/PlugIns/WeatherWidget.appex/Contents/MacOS/WeatherWidget
+17145 ??         0:00.02 /usr/bin/ssh-agent -l
+17193 ??         1:15.24 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 9 -isForBrowser -prefsLen 9902 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.1102121259 tab
+17400 ??         0:00.47 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/SpeechSynthesis.framework/Resources/com.apple.speech.speechsynthesisd
+18426 ??         0:00.00 (TaniumClient)
+18613 ??         0:00.00 (TaniumClient)
+18621 ??         0:00.00 (TaniumClient)
+18685 ??         0:00.00 (TaniumClient)
+19227 ??         0:00.00 (TaniumClient)
+19290 ??         0:00.00 (TaniumClient)
+19295 ??         0:00.00 (TaniumClient)
+19359 ??         0:00.00 (TaniumClient)
+19788 ??         0:00.00 (TaniumClient)
+19793 ??         0:00.00 (TaniumClient)
+21583 ??         0:00.00 (TaniumClient)
+21702 ??         0:00.00 (TaniumClient)
+21951 ??         0:00.00 (TaniumClient)
+21956 ??         0:00.00 (TaniumClient)
+22189 ??         0:00.00 (TaniumClient)
+22395 ??         0:00.09 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+22572 ??         0:00.00 (TaniumClient)
+22658 ??         0:00.00 (TaniumClient)
+23007 ??         0:00.00 (TaniumClient)
+23458 ??         0:00.05 /usr/libexec/ASPCarryLog
+23459 ??         0:00.03 /System/Library/PrivateFrameworks/NewDeviceOutreach.framework/ndoagent
+24651 ??         0:01.61 /System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd
+24652 ??         0:00.60 /System/Library/CoreServices/mapspushd
+24653 ??         0:00.09 /System/Library/CoreServices/ScopedBookmarkAgent
+24915 ??         0:00.00 (TaniumClient)
+24946 ??         0:00.29 /System/iOSSupport/System/Library/PrivateFrameworks/AvatarUI.framework/Support/avatarsd
+25040 ??         0:00.28 /System/Library/PrivateFrameworks/iCloudNotification.framework/iCloudNotificationAgent
+25258 ??         0:00.27 /System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/XPCServices/AssetCacheLocatorService.xpc/Contents/MacOS/AssetCacheLocatorService -a
+25259 ??         0:00.08 /usr/libexec/AssetCache/AssetCache
+25260 ??         0:00.05 /System/Library/PrivateFrameworks/AssetCacheServicesExtensions.framework/XPCServices/AssetCacheTetheratorService.xpc/Contents/MacOS/AssetCacheTetheratorService
+25261 ??         0:00.06 /usr/sbin/distnoted agent
+25818 ??         0:00.05 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+25820 ??         0:00.06 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+27889 ??         0:00.00 (TaniumClient)
+27916 ??         0:00.00 (TaniumClient)
+27981 ??         0:00.00 (TaniumClient)
+29088 ??         0:00.00 (TaniumClient)
+29283 ??         0:00.00 (TaniumClient)
+29358 ??         0:00.00 (TaniumClient)
+29450 ??         0:00.00 (TaniumClient)
+29949 ??         0:00.00 (TaniumClient)
+29958 ??         0:00.00 (TaniumClient)
+30081 ??         0:00.00 (TaniumClient)
+30143 ??         0:00.00 (TaniumClient)
+30264 ??         0:00.00 (TaniumClient)
+30402 ??         0:00.01 /usr/libexec/morphunassetsupdaterd
+30506 ??         0:00.00 (TaniumClient)
+31569 ??         0:00.00 (TaniumClient)
+31795 ??         0:00.00 (TaniumClient)
+31914 ??         0:00.00 (TaniumClient)
+31919 ??         0:00.00 (TaniumClient)
+32412 ??         0:00.00 (TaniumClient)
+32691 ??         0:00.00 (TaniumClient)
+32965 ??         0:00.00 (TaniumClient)
+33254 ??         0:00.00 (TaniumClient)
+33901 ??         0:00.08 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+35299 ??         0:03.47 /System/Applications/Calendar.app/Contents/PlugIns/CalendarWidgetExtension.appex/Contents/MacOS/CalendarWidgetExtension
+35301 ??         0:09.39 /System/Library/CoreServices/Clock.app/Contents/PlugIns/WorldClockWidget.appex/Contents/MacOS/WorldClockWidget
+35302 ??         0:02.07 /System/Applications/Stocks.app/Contents/PlugIns/StocksWidget.appex/Contents/MacOS/StocksWidget
+35624 ??         0:00.00 (TaniumClient)
+37000 ??         0:00.00 (TaniumClient)
+37051 ??         0:00.00 (TaniumClient)
+38360 ??         0:00.00 (TaniumClient)
+38613 ??         0:00.00 (TaniumClient)
+38621 ??         0:00.00 (TaniumClient)
+38683 ??         0:00.00 (TaniumClient)
+39172 ??         0:00.00 (TaniumClient)
+39177 ??         0:00.00 (TaniumClient)
+39240 ??         0:00.00 (TaniumClient)
+39418 ??         0:00.00 (TaniumClient)
+39479 ??         0:00.00 (TaniumClient)
+39569 ??         0:00.00 (TaniumClient)
+40107 ??         0:00.00 (TaniumClient)
+40181 ??         0:00.11 /usr/libexec/symptomsd-diag
+40283 ??         0:00.00 (TaniumClient)
+40401 ??         0:00.00 (TaniumClient)
+40406 ??         0:00.00 (TaniumClient)
+40960 ??         0:00.00 (TaniumClient)
+40969 ??         0:00.00 (TaniumClient)
+41148 ??         0:00.00 (TaniumClient)
+42935 ??         0:00.00 (TaniumClient)
+43940 ??         0:00.81 /usr/libexec/transparencyd
+44420 ??         0:00.00 (TaniumClient)
+44431 ??         0:00.00 (TaniumClient)
+44838 ??         0:00.02 /usr/libexec/tzd
+44839 ??         0:00.02 /System/Library/CoreServices/EscrowSecurityAlert.app/Contents/MacOS/EscrowSecurityAlert
+44841 ??         0:00.07 /System/Library/PrivateFrameworks/IMDPersistence.framework/IMAutomaticHistoryDeletionAgent.app/Contents/MacOS/IMAutomaticHistoryDeletionAgent
+44842 ??         0:06.56 /System/Library/PrivateFrameworks/StorageKit.framework/Resources/storagekitd
+44844 ??         0:00.39 /System/Library/PrivateFrameworks/CacheDelete.framework/deleted
+44846 ??         0:00.17 /usr/libexec/dprivacyd
+44847 ??         0:00.04 /System/Library/PrivateFrameworks/DifferentialPrivacy.framework/XPCServices/DPSubmissionService.xpc/Contents/MacOS/DPSubmissionService
+44850 ??         0:00.03 /System/Library/CoreServices/iconservicesagent runAsRoot
+44852 ??         0:00.10 cloudphotod
+44854 ??         0:00.09 /usr/libexec/replayd
+44855 ??         0:00.02 /System/Library/PrivateFrameworks/CacheDelete.framework/deleted_helper
+44856 ??         0:00.22 /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd --system
+44857 ??         0:00.04 /usr/bin/sysdiagnose
+44859 ??         0:01.84 /Applications/Xcode.app/Contents/PlugIns/IDECacheDeleteAppExtension.appex/Contents/MacOS/IDECacheDeleteAppExtension
+44860 ??         0:00.06 /System/Applications/Mail.app/Contents/PlugIns/MailCacheDelete.appex/Contents/MacOS/MailCacheDelete
+45283 ??         0:00.01 /System/Library/Frameworks/ColorSync.framework/Versions/A/XPCServices/com.apple.ColorSyncXPCAgent.xpc/Contents/MacOS/com.apple.ColorSyncXPCAgent
+45905 ??         0:00.02 /System/Library/PrivateFrameworks/IASUtilities.framework/Versions/A/Resources/installerauthagent
+45944 ??         0:00.00 (TaniumClient)
+46372 ??         0:00.00 (TaniumClient)
+46380 ??         0:00.00 (TaniumClient)
+46558 ??         0:00.00 (TaniumClient)
+46993 ??         0:00.00 (TaniumClient)
+47100 ??         0:00.00 (TaniumClient)
+47221 ??         0:00.00 (TaniumClient)
+47373 ??         0:00.00 (TaniumClient)
+47496 ??         0:00.00 (TaniumClient)
+47501 ??         0:00.00 (TaniumClient)
+48182 ??         0:00.00 (TaniumClient)
+48448 ??         0:00.05 /usr/sbin/ocspd
+48479 ??         0:00.00 (TaniumClient)
+48484 ??         0:00.00 (TaniumClient)
+48737 ??         0:00.00 (TaniumClient)
+48913 ??         0:00.00 (TaniumClient)
+49394 ??         0:00.00 (TaniumClient)
+49402 ??         0:00.00 (TaniumClient)
+49532 ??         0:00.00 (TaniumClient)
+50604 ??         1:01.33 /Library/Tanium/TaniumClient/TaniumClient -c
+50612 ??         0:00.01 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x100001d01
+50613 ??         0:00.02 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice1 0x100001d07
+50614 ??         0:00.01 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x100001d09
+50615 ??         0:00.01 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDeviceKB 0x100001d0b
+50616 ??         0:00.01 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserUSBHostHIDDevice0 0x100001d0f
+50618 ??         0:00.01 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserHIDEventDriver.dfrv1 0x100001d3d
+51430 ??         0:00.08 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+51461 ??         0:01.17 /System/Library/Input Methods/EmojiFunctionRowIM.app/Contents/PlugIns/EmojiFunctionRowIM_Extension.appex/Contents/MacOS/EmojiFunctionRowIM_Extension
+51498 ??         0:00.01 /System/Library/PrivateFrameworks/CharacterPicker.framework/Versions/A/XPCServices/com.apple.CharacterPicker.FileService.xpc/Contents/MacOS/com.apple.CharacterPicker.FileService
+51560 ??         0:00.00 (TaniumClient)
+51601 ??         0:00.00 (TaniumClient)
+51681 ??         0:10.16 /System/Library/DriverExtensions/com.apple.DriverKit-AppleUSBPLCOM.dext/com.apple.DriverKit-AppleUSBPLCOM com.apple.driverkit.AppleUSBPLCOM 0x100002175
+51802 ??         0:00.00 (TaniumClient)
+52257 ??         0:00.04 /System/Library/PrivateFrameworks/DeviceCheckInternal.framework/devicecheckd
+52632 ??         0:00.00 (TaniumClient)
+52727 ??         0:00.02 /System/Library/PrivateFrameworks/IntlPreferences.framework/Support/localizationswitcherd
+52735 ??         0:00.01 /usr/libexec/periodic-wrapper daily
+52736 ??         0:00.03 /usr/libexec/microstackshot
+52915 ??         0:00.00 (TaniumClient)
+52926 ??         0:00.00 (TaniumClient)
+52984 ??         0:00.00 (TaniumClient)
+53186 ??         0:00.00 (TaniumClient)
+53209 ??         0:00.00 (TaniumClient)
+53343 ??         0:00.00 (TaniumClient)
+53931 ??         0:00.00 (TaniumClient)
+53994 ??         0:00.00 (TaniumClient)
+53999 ??         0:00.00 (TaniumClient)
+54060 ??         0:00.00 (TaniumClient)
+54065 ??         0:00.00 (TaniumClient)
+54141 ??         0:00.00 (TaniumClient)
+54263 ??         0:00.00 (TaniumClient)
+54321 ??         0:00.06 /System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/XPCServices/media-indexer.xpc/Contents/MacOS/media-indexer
+54322 ??         0:00.62 /System/Library/PrivateFrameworks/AMPLibrary.framework/Versions/A/Support/AMPLibraryAgent --launchd
+54323 ??         0:00.05 /System/Library/PrivateFrameworks/CoreFP.framework/Versions/A/fairplayd
+54324 ??         0:00.04 /System/Library/PrivateFrameworks/PodcastServices.framework/XPCServices/PodcastContentService.xpc/Contents/MacOS/PodcastContentService
+54325 ??         0:00.04 /System/Library/PrivateFrameworks/BookKit.framework/Versions/A/XPCServices/com.apple.BKAgentService.xpc/Contents/MacOS/com.apple.BKAgentService
+54327 ??         0:00.07 /System/Library/PrivateFrameworks/AMPLibrary.framework/Versions/A/Support/AMPArtworkAgent --launchd
+54337 ??         0:00.29 /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbagent.app/Contents/MacOS/nbagent
+54363 ??         0:00.07 /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbstated
+54570 ??         0:00.00 (TaniumClient)
+54583 ??         0:00.00 (TaniumClient)
+54664 ??         0:00.00 (TaniumClient)
+54681 ??         0:00.00 (TaniumClient)
+54799 ??         0:00.00 (TaniumClient)
+54804 ??         0:00.00 (TaniumClient)
+55329 ??         0:00.00 (TaniumClient)
+55482 ??         0:00.00 (TaniumClient)
+55606 ??         0:00.00 (TaniumClient)
+56457 ??         0:00.00 (TaniumClient)
+56773 ??         0:00.00 (TaniumClient)
+56896 ??         0:00.00 (TaniumClient)
+56985 ??         0:00.00 (TaniumClient)
+57046 ??         0:00.00 (TaniumClient)
+57150 ??         0:00.00 (TaniumClient)
+57376 ??         0:00.00 (TaniumClient)
+57936 ??         0:00.06 /usr/libexec/aned
+57947 ??         0:00.10 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storedownloadd
+57964 ??         0:00.04 /System/Applications/Music.app/Contents/PlugIns/MusicCacheExtension.appex/Contents/MacOS/MusicCacheExtension
+57991 ??         0:00.04 /System/Applications/TV.app/Contents/PlugIns/TVCacheExtension.appex/Contents/MacOS/TVCacheExtension
+58010 ??         0:00.06 /Applications/Safari.app/Contents/PlugIns/CacheDeleteExtension.appex/Contents/MacOS/CacheDeleteExtension
+58100 ??         0:00.01 /System/Library/PrivateFrameworks/KerberosHelper/Helpers/DiskUnmountWatcher
+58526 ??         0:00.31 /System/Library/PrivateFrameworks/HelpData.framework/Versions/A/Resources/helpd
+59174 ??         0:00.00 (TaniumClient)
+59179 ??         0:00.00 (TaniumClient)
+59418 ??         0:00.00 (TaniumClient)
+59600 ??         0:00.00 (TaniumClient)
+59917 ??         0:00.00 (TaniumClient)
+60036 ??         0:00.00 (TaniumClient)
+60101 ??         0:00.00 (TaniumClient)
+60732 ??         0:00.00 (TaniumClient)
+61442 ??         0:00.15 tmux
+66260 ??         0:00.00 (TaniumClient)
+67352 ??         0:00.00 (TaniumClient)
+67357 ??         0:00.00 (TaniumClient)
+68262 ??         0:00.00 (TaniumClient)
+68690 ??         0:00.00 (TaniumClient)
+68877 ??         0:00.00 (TaniumClient)
+68885 ??         0:00.00 (TaniumClient)
+69003 ??         0:00.00 (TaniumClient)
+69573 ??         0:00.00 (TaniumClient)
+69635 ??         0:00.00 (TaniumClient)
+69640 ??         0:00.00 (TaniumClient)
+69701 ??         0:00.00 (TaniumClient)
+69706 ??         0:00.00 (TaniumClient)
+69886 ??         0:00.00 (TaniumClient)
+70258 ??         0:00.00 (TaniumClient)
+70376 ??         0:00.00 (TaniumClient)
+70381 ??         0:00.00 (TaniumClient)
+70845 ??         0:00.00 (TaniumClient)
+71062 ??         0:00.00 (TaniumClient)
+71183 ??         0:00.00 (TaniumClient)
+73188 ??         0:00.00 (TaniumClient)
+73714 ??         0:00.00 (TaniumClient)
+74931 ??         0:00.00 (TaniumClient)
+75220 ??         0:00.00 (TaniumClient)
+76795 ??         0:00.00 (TaniumClient)
+77075 ??         0:00.00 (TaniumClient)
+77262 ??         0:00.00 (TaniumClient)
+77385 ??         0:00.00 (TaniumClient)
+77452 ??         0:00.00 (TaniumClient)
+77501 ??         2:27.07 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 10 -isForBrowser -prefsLen 9934 -prefMapSize 241257 -jsInit 285716 -sbStartup -sbAppPath /Applications/Firefox.app -sbLevel 3 -sbAllowAudio -sbAllowWindowServer -parentBuildID 20210823123856 -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.242467392 tab
+78059 ??         0:00.00 (TaniumClient)
+78198 ??         0:00.00 (TaniumClient)
+78260 ??         0:00.00 (TaniumClient)
+78265 ??         0:00.00 (TaniumClient)
+78399 ??         0:00.00 (TaniumClient)
+78404 ??         0:00.00 (TaniumClient)
+78650 ??         0:00.00 (TaniumClient)
+78990 ??         0:00.00 (TaniumClient)
+79108 ??         0:00.00 (TaniumClient)
+80664 ??         0:00.00 (TaniumClient)
+80730 ??         0:00.09 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+80731 ??         0:02.13 /Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -parentBuildID 20210823123856 -prefsLen 10624 -prefMapSize 241257 -sbStartup -sbAppPath /Applications/Firefox.app -appdir /Applications/Firefox.app/Contents/Resources/browser -profile /Users/sethk/Library/Application Support/Firefox/Profiles/hpm8lxxi.default-release 641 gecko-crash-server-pipe.641 org.mozilla.machname.504783450 rdd
+80732 ??         0:02.70 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+81170 ??         0:00.00 (TaniumClient)
+81503 ??         0:00.00 (TaniumClient)
+81621 ??         0:00.00 (TaniumClient)
+81742 ??         0:00.00 (TaniumClient)
+82883 ??         0:00.00 (TaniumClient)
+82993 ??         0:04.04 /usr/libexec/PerfPowerServices
+82998 ??         0:00.00 (TaniumClient)
+86547 ??         0:00.10 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+86694 ??         0:00.00 (TaniumClient)
+86699 ??         0:00.00 (TaniumClient)
+87720 ??         0:00.00 (TaniumClient)
+87793 ??         0:00.00 (TaniumClient)
+87980 ??         0:00.00 (TaniumClient)
+88166 ??         0:00.00 (TaniumClient)
+88716 ??         0:00.00 (TaniumClient)
+88836 ??         0:00.00 (TaniumClient)
+88899 ??         0:00.00 (TaniumClient)
+88904 ??         0:00.00 (TaniumClient)
+89268 ??         0:00.00 (TaniumClient)
+89283 ??         0:00.00 (TaniumClient)
+89935 ??         0:00.00 (TaniumClient)
+90053 ??         0:00.00 (TaniumClient)
+90115 ??         0:00.00 (TaniumClient)
+90125 ??         0:00.00 (TaniumClient)
+90528 ??         0:00.00 (TaniumClient)
+90914 ??         0:00.00 (TaniumClient)
+91108 ??         0:00.00 (TaniumClient)
+91476 ??         0:00.00 (TaniumClient)
+91497 ??         0:00.00 (TaniumClient)
+92516 ??         0:00.04 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+92517 ??         0:00.06 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+93099 ??         0:00.00 (TaniumClient)
+94595 ??         0:00.00 (TaniumClient)
+95619 ??         0:00.00 (TaniumClient)
+96469 ??         0:00.00 (TaniumClient)
+96724 ??         0:00.00 (TaniumClient)
+96788 ??         0:00.00 (TaniumClient)
+96975 ??         0:00.00 (TaniumClient)
+97511 ??         0:00.00 (TaniumClient)
+97946 ??         0:00.00 (TaniumClient)
+98010 ??         0:00.00 (TaniumClient)
+98016 ??         0:00.00 (TaniumClient)
+98078 ??         0:00.00 (TaniumClient)
+98178 ??         0:00.00 (TaniumClient)
+98183 ??         0:00.00 (TaniumClient)
+98688 ??         0:00.00 (TaniumClient)
+98807 ??         0:00.00 (TaniumClient)
+98869 ??         0:00.00 (TaniumClient)
+98995 ??         0:00.00 (TaniumClient)
+99285 ??         0:00.00 (TaniumClient)
+99290 ??         0:00.08 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+99561 ??         0:00.00 (TaniumClient)
+99735 ??         0:00.00 (TaniumClient)
+59185 tty.usbserial-144230   0:03.48 SCREEN
+60666 ttys000    0:00.03 login -pf sethk
+60667 ttys000    0:00.14 -zsh
+61440 ttys000    0:00.01 tmux
+59186 ttys001    0:00.03 login -pflq sethk /bin/zsh
+59187 ttys001    0:00.14 zsh
+61443 ttys002    0:00.05 -zsh
+61446 ttys003    0:00.13 -zsh
+62832 ttys003    0:00.05 sudo su
+62968 ttys003    0:00.02 su
+62969 ttys003    0:00.02 sh
+63921 ttys003    0:00.00 ps -ax
