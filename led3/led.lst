@@ -40,21 +40,18 @@
   42               	.global	steps
   43               		.data
   46               	steps:
-  47 0000 01        		.byte	1
-  48 0001 02        		.byte	2
-  49 0002 04        		.byte	4
-  50 0003 08        		.byte	8
-  51               		.ident	"GCC: (GNU) 8.1.0"
-  52               	.global __do_copy_data
+  47 0000 0102 0408 		.ascii	"\001\002\004\b"
+  48               		.ident	"GCC: (Homebrew AVR GCC 9.3.0_3) 9.3.0"
+  49               	.global __do_copy_data
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 led.c
-/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:2      *ABS*:000000000000003e __SP_H__
-/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:3      *ABS*:000000000000003d __SP_L__
-/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:4      *ABS*:000000000000003f __SREG__
-/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:5      *ABS*:0000000000000000 __tmp_reg__
-/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:6      *ABS*:0000000000000001 __zero_reg__
-/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:11     .text.startup:0000000000000000 main
-/var/folders/rf/q546ss3962b24ll99thqcpxh0000gn/T//ccBMh6lL.s:46     .data:0000000000000000 steps
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccqFpGBh.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccqFpGBh.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccqFpGBh.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccqFpGBh.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccqFpGBh.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccqFpGBh.s:11     .text.startup:0000000000000000 main
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccqFpGBh.s:46     .data:0000000000000000 steps
 
 UNDEFINED SYMBOLS
 __do_copy_data

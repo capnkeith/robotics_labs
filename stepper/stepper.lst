@@ -1,0 +1,55 @@
+   1               		.file	"stepper.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               		.section	.text.startup,"ax",@progbits
+   9               	.global	main
+  11               	main:
+  12               	/* prologue: function */
+  13               	/* frame size = 0 */
+  14               	/* stack size = 0 */
+  15               	.L__stack_usage = 0
+  16 0000 8FE0      		ldi r24,lo8(15)
+  17 0002 84B9      		out 0x4,r24
+  18 0004 80E0      		ldi r24,0
+  19               	.L3:
+  20 0006 E82F      		mov r30,r24
+  21 0008 F0E0      		ldi r31,0
+  22 000a E050      		subi r30,lo8(-(steps))
+  23 000c F040      		sbci r31,hi8(-(steps))
+  24 000e 9081      		ld r25,Z
+  25 0010 95B9      		out 0x5,r25
+  26 0012 8F5F      		subi r24,lo8(-(1))
+  27 0014 8830      		cpi r24,lo8(8)
+  28 0016 01F4      		brne .L2
+  29 0018 80E0      		ldi r24,0
+  30               	.L2:
+  31 001a EFE4      		ldi r30,lo8(17999)
+  32 001c F6E4      		ldi r31,hi8(17999)
+  33 001e 3197      	1:	sbiw r30,1
+  34 0020 01F4      		brne 1b
+  35 0022 00C0      		rjmp .
+  36 0024 0000      		nop
+  37 0026 00C0      		rjmp .L3
+  39               	.global	steps
+  40               		.data
+  43               	steps:
+  44 0000 080C 0406 		.ascii	"\b\f\004\006\002\003\001\t"
+  44      0203 0109 
+  45               		.ident	"GCC: (Homebrew AVR GCC 9.3.0_3) 9.3.0"
+  46               	.global __do_copy_data
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stepper.c
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccmt2tcu.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccmt2tcu.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccmt2tcu.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccmt2tcu.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccmt2tcu.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccmt2tcu.s:11     .text.startup:0000000000000000 main
+/var/folders/gh/cjqrn4t91bg0gsm0m5pynlnh0000gn/T//ccmt2tcu.s:43     .data:0000000000000000 steps
+
+UNDEFINED SYMBOLS
+__do_copy_data
