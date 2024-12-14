@@ -2,8 +2,8 @@
 
 # Define the target and MCU
 TARGET = main
-MCU = atmega328p
-F_CPU = 8000000
+MCU = avr64da64
+F_CPU = 24000000
 CDEFS = -DF_CPU=$(F_CPU)UL
 
 # Define the compiler and avrdude paths
@@ -11,8 +11,8 @@ CC = avr-gcc
 AVRDUDE = avrdude
 
 # Define the programmer and port
-PROGRAMMER = usbasp
-PORT = usb
+PROGRAMMER = serialupdi
+PORT = /dev/tty.usbserial-1430
 
 # Define the compiler flags
 CFLAGS = -Wall -Os -std=gnu99 -mmcu=$(MCU) $(CDEFS)

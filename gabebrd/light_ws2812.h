@@ -40,7 +40,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 #if !defined(ws2812_interrupt_handling)
-#define ws2812_interrupt_handling  1 
+#define ws2812_interrupt_handling  1
 #endif
 
 /*
@@ -94,7 +94,12 @@ void ws2812_sendarray_mask(uint8_t *array,uint16_t length, uint8_t pinmask);
 #define CONCAT_EXP(a, b)   CONCAT(a, b)
 #endif
 
+#define AVR64
+#ifndef AVR64
 #define ws2812_PORTREG  CONCAT_EXP(PORT,ws2812_port)
 #define ws2812_DDRREG   CONCAT_EXP(DDR,ws2812_port)
-
+#else
+#define ws2812_PORTREG  PORTC.OUT
+#define ws2812_DDRREG   PORTC.DIR
+#endif
 #endif /* LIGHT_WS2812_H_ */

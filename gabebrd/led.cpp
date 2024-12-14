@@ -1,42 +1,34 @@
 #include <util/delay.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
-
+#include <string.h>
 extern "C" {
 #include "light_ws2812.h"
 
 #define MAX_LEDS 120 
 
 volatile uint32_t ticks = 1;
-volatile uint32_t last_ticks = 1;
 
+}
+
+#define TIMER_PERIOD        0x10
+#define ONE_SECOND_TICKS 10000
+
+ISR(TCA0_OVF_vect) {
+    ticks++;
+    TCA0.SINGLE.INTFLAGS = TCA_SINGLE_OVF_bm;
+}
+
+void init_timer(void)
+{
+    TCA0.SINGLE.INTCTRL = TCA_SINGLE_OVF_bm;
+    TCA0.SINGLE.PER = TIMER_PERIOD;
+    TCA0.SINGLE.CTRLA = (TCA_SINGLE_CLKSEL_1_bm | TCA_SINGLE_CLKSEL_2_bm);
+//    TCA0.SINGLE.CTRLA = (TCA_SINGLE_CLKSEL_1_bm);
+    TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm;
 }
 
 #if 0
-// init_timer()
-//  start a timer interrupt periodically. 
-void init_timer(void)
-{
-    cli();                      // disable interrupts during timer init.
-    OCR2A = 62;                 // compare against 
-    TCCR2A |= (1 << WGM21);     // CTC mode
-    TIMSK2 |= (1 << OCIE2A);    // enable timer compare interrupt
-//    TCCR2B |= (1 << CS21);      // prescaler to 128
-    TCCR2B |= (1 << CS20);      // prescaler to 128
-    ticks = 1;                  // init ticks to 0
-    sei();                      // enable interrupts. Timer is now running.
-}
-#else
-void init_timer(void){
-   TCCR1A = 0; //CTC mode 
-   TCCR1B = 0B00000001; //prescaler=256,CTC mode
-   TIMSK1 = 0B00000010; //Interrupt enable for OCR1A compare match
-   OCR1A = 10;
-//   OCR1A = 1;
-}
-#endif
-
-
 // This is an interrupt service routine. It will be called every few
 // micro seconds interrupting your main() function in the middle of whatever 
 // it was doing. This can be very hard to debug. For this reason keep code in
@@ -46,6 +38,7 @@ ISR (TIMER1_COMPA_vect)
 {
     ticks++;                            // add 1 to ticks each time called.
 }
+#endif
 
 class led_t
 {
@@ -53,7 +46,7 @@ public:
 
     led_t(uint8_t pin, uint8_t count, uint8_t red, uint8_t green, uint8_t blue, uint8_t gamma)
     {
-        total = count * 3;
+        total = count;
         led_pin = pin;
         red_level = red;
         green_level = green;
@@ -66,6 +59,7 @@ public:
         red_level = (uint8_t)gamma_correct;
         gamma_correct = ((uint16_t)blue_level * gamma)/0xff;
         blue_level = (uint8_t)gamma_correct;
+        memset(led_workspace, 0, sizeof(led_workspace)); 
     }
 
     void update_gamma(void) 
@@ -97,10 +91,9 @@ class ping_t : public led_t
             width = set_width;
             width_dir = 1;
             position = 0;
-            last_pos = 0;
             state = PING_START;    
             next_state = PING_UP;
-            delay = 1;
+            delay = ONE_SECOND_TICKS;
             next_time = ticks + delay;
         }
        
@@ -126,9 +119,8 @@ class color_t : public led_t
     public:
         color_t(uint8_t pin, uint8_t count, uint8_t r, uint8_t g, uint8_t b, uint8_t gamma) : 
             led_t(pin, count, r, g, b, gamma) {
-
             state = COLOR_START;    
-            delay = 1;
+            delay = ONE_SECOND_TICKS;
         }
         void run(void);
         void set_fade(uint32_t time, uint8_t gamma, uint8_t next);
@@ -167,7 +159,7 @@ void color_t::run(void)
                led_workspace[i].g = green_level;
                led_workspace[i].b = blue_level;
             }
-            ws2812_sendarray_mask((uint8_t *)led_workspace, total, led_pin);
+            ws2812_sendarray_mask((uint8_t *)led_workspace, total * sizeof(cRGB) , led_pin);
             state = next_state;
             break;
         case COLOR_FADE:
@@ -192,7 +184,6 @@ void ping_t::run(void)
     switch(state) {
         case PING_START:
             for (i=0; i< total; i++) {
-
                 if (i< position) {
                     led_workspace[i].r = led_workspace[i].g  = led_workspace[i].b = 0;
                 } else if (i < position + width) {
@@ -203,13 +194,12 @@ void ping_t::run(void)
                     led_workspace[i].r = led_workspace[i].g  = led_workspace[i].b = 0;
                 }
             }
-            ws2812_sendarray_mask((uint8_t *)led_workspace, total, led_pin);
+            ws2812_sendarray_mask((uint8_t *)led_workspace, total * sizeof(cRGB), led_pin);
             state = next_state;
             break;
         case PING_UP:
             if (ticks > next_time) {
                 if (position < total-1) {
-                    last_pos = position;
                     position++;
                 } else {
                     next_state = PING_DOWN;
@@ -222,8 +212,8 @@ void ping_t::run(void)
                     
                 }
                 next_time = ticks + delay;
+                state = PING_START;
             }
-            state = PING_START;
             break;
         case PING_DOWN:
             if (ticks > next_time) {
@@ -234,34 +224,81 @@ void ping_t::run(void)
                     next_state = PING_UP;
                 }
                 next_time = ticks + delay;
+                state = PING_START;
             }
-            state = PING_START;
             break;
+    }
+}
+
+#if 0
+void init_timer(void)
+{
+    TCB0.CCMP = 240;
+    TCB0.INTCTRL = TCB_CAPTEI_bm;
+    TCB0.CTRLA = TCB_ENABLE_bm;
+//TCB_CLKSEL_CLKDIV_gv | TCB_ENABLE_bm;
+}
+#endif
+
+
+
+void self_check(void)
+{
+    {
+        color_t color0(1,120,0xff,0,0,0xff);
+        color0.run(); 
+    }
+    uint32_t next_tick = ticks + ONE_SECOND_TICKS/10;
+    while(ticks < next_tick){}
+    {
+        color_t color0(1,120,0,0xff,0,0xff);
+        color0.run(); 
+    }
+    next_tick = ticks + ONE_SECOND_TICKS/10;
+    while(ticks < next_tick){}
+    {
+        color_t color0(1,120,0,0,0xff,0xff);
+        color0.run(); 
+    }
+    next_tick = ticks + ONE_SECOND_TICKS/10;
+    while(ticks < next_tick){}
+    {
+        next_tick = ticks + ONE_SECOND_TICKS/10;
+        color_t color0(1,120,0,0,0,0xff);
+        color0.run(); 
     }
 }
 
 int main(void)
 {
-	DDRD = 3;
-    init_timer();
+	PORTC.DIR = 7;
+    PORTC.OUT = 0;
 
-/*
-    ping_t ping(1,120,1,0,0xff,0);
-    ping_t ping2(2,120,5,0xff,0,0);
-    ping.blue_level = 0xff;
-    ping2.red_level = 0xff;
-    ping2.width = 5;
-*/
-    color_t color1(1,10,0,0xff,0,0xff);
-    color_t color2(2,10,0xff,0,0,0x7f);
-    
-    color1.set_fade(10,1,color_t::COLOR_FADE);
-    color2.set_fade(10,1,color_t::COLOR_FADE);
+    _PROTECTED_WRITE (CLKCTRL.OSCHFCTRLA, CLKCTRL_FRQSEL_24M_gc);
+    init_timer();
+    sei();
+    self_check();
+    ping_t ping(1,5,1,0xff,0,0);
     while(1) {
-//        ping.run();
-//        ping2.run();
-        color1.run();
-        color2.run();
+        ping.run();
     }
 
 }
+//    color_t color0(1,10,10,0,0,0xff);
+//    color0.run(); 
+//    PORTC.OUT |= 4;
+//    init_timer();
+//    ping_t ping(1,10,2,0,0xff,0);
+//    ping_t ping2(2,120,5,0xff,0,0);
+//    ping.blue_level = 0xff;
+//    ping2.red_level = 0xff;
+//    ping2.width = 5;
+//      color_t color1(1,5,0xff,0,0,0x10);
+//    color_t color2(2,10,0xff,0,0,0x7f);
+    
+//    color1.set_fade(10,1,color_t::COLOR_FADE);
+//    color2.set_fade(10,1,color_t::COLOR_FADE);
+//        ping.run();
+//        ping2.run();
+//        color1.run();
+     
