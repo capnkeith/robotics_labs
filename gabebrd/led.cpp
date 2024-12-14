@@ -43,6 +43,9 @@ ISR (TIMER1_COMPA_vect)
 class led_t
 {
 public:
+    led_t(void) 
+    {
+    }
 
     led_t(uint8_t pin, uint8_t count, uint8_t red, uint8_t green, uint8_t blue, uint8_t gamma)
     {
@@ -52,7 +55,7 @@ public:
         green_level = green;
         blue_level = blue;
         gamma_level = gamma;
-
+        done = false;
         uint16_t gamma_correct = ((uint16_t)green_level * gamma)/0xff;
         green_level = (uint8_t)gamma_correct;
         gamma_correct = ((uint16_t)red_level * gamma)/0xff;
@@ -72,6 +75,17 @@ public:
         blue_level = (uint8_t)gamma_correct;
     }
 
+    void set_done(bool toset) 
+    {
+        done = toset;
+    }
+
+    bool get_done(void) 
+    {
+        return done;
+    }
+
+    bool        done;
     struct      cRGB *led_workspace;
     uint8_t     total;      // total number of leds
     uint8_t     led_pin;    // control pin for led chain;
@@ -85,6 +99,9 @@ public:
 class ping_t : public led_t 
 {
     public:
+        ping_t(void)
+        {
+        }
         ping_t(uint8_t pin, uint8_t count=MAX_LEDS, uint8_t set_width=1, uint8_t red=0xff, uint8_t green=0xff, uint8_t blue=0xff) : led_t(pin, count, red, green, blue, 0xff)
         {
             led_pin = pin;
@@ -93,10 +110,14 @@ class ping_t : public led_t
             position = 0;
             state = PING_START;    
             next_state = PING_UP;
-            delay = ONE_SECOND_TICKS;
+            delay = 1;
             next_time = ticks + delay;
         }
        
+        void set_delay(uint32_t ticks)
+        {
+            delay=ticks;
+        } 
 
         uint8_t     position;   // led offset start
         uint8_t     last_pos;
@@ -117,6 +138,9 @@ class ping_t : public led_t
 class color_t : public led_t
 {
     public:
+        color_t(void) 
+        {
+        } 
         color_t(uint8_t pin, uint8_t count, uint8_t r, uint8_t g, uint8_t b, uint8_t gamma) : 
             led_t(pin, count, r, g, b, gamma) {
             state = COLOR_START;    
@@ -222,6 +246,7 @@ void ping_t::run(void)
                     position--;
                 } else {
                     next_state = PING_UP;
+                    set_done(true);
                 }
                 next_time = ticks + delay;
                 state = PING_START;
@@ -267,7 +292,71 @@ void self_check(void)
         color_t color0(1,120,0,0,0,0xff);
         color0.run(); 
     }
+    {
+        color_t color0(2,120,0xff,0,0,0xff);
+        color0.run(); 
+    }
+    next_tick = ticks + ONE_SECOND_TICKS/10;
+    while(ticks < next_tick){}
+    {
+        color_t color0(2,120,0,0xff,0,0xff);
+        color0.run(); 
+    }
+    next_tick = ticks + ONE_SECOND_TICKS/10;
+    while(ticks < next_tick){}
+    {
+        color_t color0(2,120,0,0,0xff,0xff);
+        color0.run(); 
+    }
+    next_tick = ticks + ONE_SECOND_TICKS/10;
+    while(ticks < next_tick){}
+    {
+        next_tick = ticks + ONE_SECOND_TICKS/10;
+        color_t color0(2,120,0,0,0,0xff);
+        color0.run(); 
+    }
 }
+
+class display_t
+{
+    public:
+        display_t() 
+        {
+            ping1 = ping_t(1,10,2,0,0xff,0);
+            ping2 = ping_t(2,10,2,0,0,0xff);
+            display_state = PING_DISPLAY;
+            ping1.set_delay(ONE_SECOND_TICKS);
+            ping2.set_delay(ONE_SECOND_TICKS/2);
+        }
+   
+        ping_t ping1;
+        ping_t ping2;
+        color_t color1;
+        color_t color2;
+        uint8_t display_state;
+        void run() {
+            switch(display_state) {
+                case PING_DISPLAY:
+                    ping1.run();
+                    ping2.run();
+                    if (ping2.get_done()) {
+                        display_state = COLOR_DISPLAY;
+                        color1 = color_t(1,120,0xff,0,0,0x10);
+                        color2 = color_t(2,120,0,0,0xff,0x10);
+                    }
+                    break;
+                case COLOR_DISPLAY:
+                    color1.run();
+                    color2.run();
+                    break;
+            } 
+        }          
+        
+        enum {
+            PING_DISPLAY=0,
+            COLOR_DISPLAY
+        };
+};
 
 int main(void)
 {
@@ -278,10 +367,20 @@ int main(void)
     init_timer();
     sei();
     self_check();
-    ping_t ping(1,5,1,0xff,0,0);
+
+    display_t disp;
     while(1) {
-        ping.run();
+        disp.run();
+    } 
+
+#if 0
+    ping_t ping1(1,120,1,0xff,0,0);
+    ping_t ping2(2,120,1,0,0xff,0);
+    while(1) {
+        ping1.run();
+        ping2.run();
     }
+#endif
 
 }
 //    color_t color0(1,10,10,0,0,0xff);
