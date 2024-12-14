@@ -6,13 +6,13 @@ extern "C" {
 #include "light_ws2812.h"
 
 #define MAX_LEDS 120 
-
+#define MAX_PINS 2
 volatile uint32_t ticks = 1;
-
+struct      cRGB global_led_workspaces[MAX_PINS][MAX_LEDS];
 }
 
-#define TIMER_PERIOD        0x10
-#define ONE_SECOND_TICKS 10000
+#define TIMER_PERIOD        0x1
+#define ONE_SECOND_TICKS    50000
 
 ISR(TCA0_OVF_vect) {
     ticks++;
@@ -59,7 +59,7 @@ public:
         red_level = (uint8_t)gamma_correct;
         gamma_correct = ((uint16_t)blue_level * gamma)/0xff;
         blue_level = (uint8_t)gamma_correct;
-        memset(led_workspace, 0, sizeof(led_workspace)); 
+        led_workspace = &global_led_workspaces[pin][0]; 
     }
 
     void update_gamma(void) 
@@ -72,7 +72,7 @@ public:
         blue_level = (uint8_t)gamma_correct;
     }
 
-    struct      cRGB led_workspace[MAX_LEDS];
+    struct      cRGB *led_workspace;
     uint8_t     total;      // total number of leds
     uint8_t     led_pin;    // control pin for led chain;
     uint8_t     red_level;
